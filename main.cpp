@@ -160,8 +160,6 @@ int main() {
 
   
   to_reduced_row_echelon_form(M);
-
-
 /*
   int check = 0;
     for (int j = 0; j < H*L+1; ++j)
@@ -176,13 +174,11 @@ int main() {
   for (int i = 0; i < H; ++i){
     for (int j = 0; j < L; ++j){
     	char output;
-    	
-    	if (abs(M[i*L+j][H*L])) output = '*'; 
-		else 					output = '.';
-		
+      	if (abs(M[i*L+j][H*L])) output = '*'; 
+	else output = '.';
         std::cout << output  << ' ';
-	}
-	std::cout << "\n";
+    }
+    std::cout << "\n";
   }
  
   return EXIT_SUCCESS;
